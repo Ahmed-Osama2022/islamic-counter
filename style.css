@@ -12,7 +12,8 @@
     --text-color: #b4916b;
     --text-color-lghter: #e1a565;
     --text-color-white: #f6ffff;
-
+    --red-color: #d81e5b;
+    --green-color: #59c9a5;
 }
 body {
     background: rgb(26,29,36);
@@ -76,6 +77,12 @@ body {
     font-size: 0.95rem;
     padding-bottom: 1rem;
 }
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 button {
     background-color: var(--text-color-lghter);
     color: rgba(0, 0, 0, 0.75);
@@ -101,6 +108,12 @@ button::selection {
     background-color: inherit;
     color: inherit;
 }
+.increment {
+    background-color: var(--green-color);
+}
+#reset {
+    background-color: var(--red-color);
+}
 .copyright {
     font-size: 0.85rem;
     opacity: 0.35;
@@ -114,3 +127,7 @@ button::selection {
     font-style: italic;
     letter-spacing: 1px;
 }
+
+/*
+ * End of Styling
+*/

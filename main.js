@@ -4,8 +4,12 @@
  * Global variables
  */
 const counter = document.querySelector('.counter');
-const button = document.querySelector('button');
+const button = document.querySelector('.increment');
+const reset = document.querySelector('#reset');
 const word = document.querySelector('.word');
+
+// Local Storage
+let countLocal = localStorage.getItem('count') || 0;
 
 /**
  * End global variables
@@ -15,23 +19,33 @@ const word = document.querySelector('.word');
 /**
  * Start helper code 
  */
-let count = 0;
+
+counter.textContent = countLocal;
+// Start an Event listener on the buttons
+
+// 1- Increment button: 
 button.addEventListener('click', (e) => {
-    count += 1;
-    counter.textContent = count;
-   
-    if (count === 1000) {
+    countLocal ++;
+    localStorage.setItem('count', countLocal);
+    counter.textContent = countLocal;
+    
+    // checking conditions:
+    if (countLocal === 1000) {
         word.textContent = 'لقد انتهيت من العد';
 
         setTimeout(() => {
             word.textContent = 'الصلاة على النبي محمد' }
             , 1500); 
-        if (count === 1000) {
-            count = 0;
+        if (countLocal === 1000) {
+            countLocal = 0;
         };
     };
-  
-
+});
+// 2- Reset button: 
+reset.addEventListener('click', (e) => {
+    countLocal = 0;
+    counter.textContent = 0;
+    localStorage.removeItem('count');
 });
 
 
