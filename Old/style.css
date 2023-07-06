@@ -1,0 +1,133 @@
+/* import fonts here */
+@font-face {
+    font-family: 'Noto-arabic';
+    src: url('../Noto_Naskh_Arabic/static/NotoNaskhArabic-Regular.ttf');
+}
+
+:root {
+    --main-color: #1A1D24;
+    --blue-color: #02a3c1;
+    --blue-color-darker: #1e8a9d;
+
+    --text-color: #b4916b;
+    --text-color-lghter: #e1a565;
+    --text-color-white: #f6ffff;
+    --red-color: #d81e5b;
+    --green-color: #59c9a5;
+}
+body {
+    background: rgb(26,29,36);
+    background: linear-gradient(120deg, rgba(26,29,36,1) 0%, rgba(2,163,193,1) 54%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    font-family: 'Noto-arabic';
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 80%;
+    /* max-width: 420px; */
+    max-width: 95vw;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
+    margin: auto;
+
+    border-radius: 10px;
+    border-radius: 8px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    padding: 1rem;
+    margin-top: 1.5rem;
+
+    position: relative;
+}
+.text {
+    background-color: var(--text-color-lghter);
+    border-radius: inherit;
+    border: inherit;
+}
+.text p {
+    text-align: center;
+    font-size: 1;
+    padding: 0.5rem 1rem;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.75rem;
+}
+.text p:first-child {
+    padding-bottom: -10px;
+    font-weight: bold;
+}
+.text p:last-child {
+    font-style: italic;
+}
+.counter {
+    font-size: 3.5rem;
+    margin: 1.25rem 0 1rem;
+    color: var(--text-color-lghter);
+}
+.word {
+    color: rgba(0, 0, 0, 0.65);
+    font-weight: bold;
+    font-size: 0.95rem;
+    padding-bottom: 1rem;
+}
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+button {
+    background-color: var(--text-color-lghter);
+    color: rgba(0, 0, 0, 0.75);
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    border: none;
+    transition: outline 1s;  
+    transition: outline-offset, outline-color, background-color;
+    transition-duration: 0.25s;
+    cursor: pointer;
+    /* padding: 1rem 0; */
+    margin: 1rem;
+}
+button:hover {
+    outline-offset: 4px;
+}
+button::selection {
+    background-color: inherit;
+    color: inherit;
+}
+.increment {
+    background-color: var(--green-color);
+}
+#reset {
+    background-color: var(--red-color);
+}
+.copyright {
+    font-size: 0.85rem;
+    opacity: 0.35;
+    text-align: center;
+    position: absolute;
+    bottom: 5px;
+    margin-bottom: -5px;
+}
+.copyright span {
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+
+/*
+ * End of Styling
+*/
