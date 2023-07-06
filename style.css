@@ -51,6 +51,7 @@ body {
     background-color: var(--text-color-lghter);
     border-radius: inherit;
     border: inherit;
+    direction: rtl;
 }
 .text p {
     text-align: center;
@@ -64,7 +65,7 @@ body {
     font-weight: bold;
 }
 .text p:last-child {
-    font-style: italic;
+    color: rgba(0, 0, 0, 0.55);
 }
 .counter {
     font-size: 3.5rem;
@@ -113,6 +114,9 @@ button::selection {
 }
 #reset {
     background-color: var(--red-color);
+    width: 50px;
+    height: 50px;
+    font-size: 0.75rem;
 }
 .copyright {
     font-size: 0.85rem;

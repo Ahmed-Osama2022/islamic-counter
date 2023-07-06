@@ -34,7 +34,7 @@ button.addEventListener('click', (e) => {
         word.textContent = 'لقد انتهيت من العد';
 
         setTimeout(() => {
-            word.textContent = 'الصلاة على النبي محمد' }
+            word.textContent = ' أستغفر الله' }
             , 1500); 
         if (countLocal === 1000) {
             countLocal = 0;
@@ -47,7 +47,6 @@ reset.addEventListener('click', (e) => {
     counter.textContent = 0;
     localStorage.removeItem('count');
 });
-
 
 /**
  * End start helper code 
