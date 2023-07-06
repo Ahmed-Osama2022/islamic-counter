@@ -9,7 +9,7 @@ const reset = document.querySelector('#reset');
 const word = document.querySelector('.word');
 
 // Local Storage
-let countLocal = localStorage.getItem('count') || 0;
+let countLocalNew = localStorage.getItem('countNew') || 0;
 
 /**
  * End global variables
@@ -20,32 +20,32 @@ let countLocal = localStorage.getItem('count') || 0;
  * Start helper code 
  */
 
-counter.textContent = countLocal;
+counter.textContent = countLocalNew;
 // Start an Event listener on the buttons
 
 // 1- Increment button: 
 button.addEventListener('click', (e) => {
-    countLocal ++;
-    localStorage.setItem('count', countLocal);
-    counter.textContent = countLocal;
+    countLocalNew ++;
+    localStorage.setItem('countNew', countLocalNew);
+    counter.textContent = countLocalNew;
     
     // checking conditions:
-    if (countLocal === 1000) {
+    if (countLocalNew === 1000) {
         word.textContent = 'لقد انتهيت من العد';
 
         setTimeout(() => {
             word.textContent = 'الصلاة على النبي محمد' }
             , 1500); 
-        if (countLocal === 1000) {
-            countLocal = 0;
+        if (countLocalNew === 1000) {
+            countLocalNew = 0;
         };
     };
 });
 // 2- Reset button: 
 reset.addEventListener('click', (e) => {
-    countLocal = 0;
+    countLocalNew = 0;
     counter.textContent = 0;
-    localStorage.removeItem('count');
+    localStorage.removeItem('countNew');
 });
 
 

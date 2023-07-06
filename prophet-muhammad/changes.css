@@ -1,0 +1,8 @@
+.container p {
+    direction: ltr !important;
+}
+
+.redirect {
+    height: 30px !important ;
+    width: 40px !important ;
+}

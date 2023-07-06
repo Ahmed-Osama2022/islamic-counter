@@ -15,22 +15,29 @@
     --red-color: #d81e5b;
     --green-color: #59c9a5;
 }
+
 body {
-    background: rgb(26,29,36);
-    background: linear-gradient(120deg, rgba(26,29,36,1) 0%, rgba(2,163,193,1) 54%);
+    background: rgb(26, 29, 36);
+    background: linear-gradient(120deg, rgba(26, 29, 36, 1) 0%, rgba(2, 163, 193, 1) 54%);
     height: 100vh;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     overflow-x: hidden;
     font-family: 'Noto-arabic';
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     width: 80%;
     /* max-width: 420px; */
     max-width: 95vw;
@@ -46,13 +53,29 @@ body {
     margin-top: 1.5rem;
 
     position: relative;
+    
+    animation:              appear 1s;
+    -moz-animation:         appear 1s;
+    -webkit-animation:      appear 1s;
+    -o-animation:           appear 1s;
+    -ms-animation:          appear 1s;
 }
+@keyframes appear {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
 .text {
     background-color: var(--text-color-lghter);
     border-radius: inherit;
     border: inherit;
     direction: rtl;
 }
+
 .text p {
     text-align: center;
     font-size: 1;
@@ -60,30 +83,36 @@ body {
     color: rgba(0, 0, 0, 0.75);
     line-height: 1.75rem;
 }
+
 .text p:first-child {
     padding-bottom: -10px;
     font-weight: bold;
 }
+
 .text p:last-child {
     color: rgba(0, 0, 0, 0.55);
 }
+
 .counter {
     font-size: 3.5rem;
     margin: 1.25rem 0 1rem;
     color: var(--text-color-lghter);
 }
+
 .word {
     color: rgba(0, 0, 0, 0.65);
     font-weight: bold;
     font-size: 0.95rem;
     padding-bottom: 1rem;
 }
+
 .btn-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
+
 button {
     background-color: var(--text-color-lghter);
     color: rgba(0, 0, 0, 0.75);
@@ -95,29 +124,35 @@ button {
     border-radius: 50%;
     outline: 2px solid rgba(255, 255, 255, 0.5);
     border: none;
-    transition: outline 1s;  
+    transition: outline 1s;
     transition: outline-offset, outline-color, background-color;
     transition-duration: 0.25s;
     cursor: pointer;
     /* padding: 1rem 0; */
     margin: 1rem;
 }
+
 button:hover {
     outline-offset: 4px;
 }
+
 button::selection {
     background-color: inherit;
     color: inherit;
 }
+
 .increment {
     background-color: var(--green-color);
 }
+
 #reset {
     background-color: var(--red-color);
     width: 50px;
     height: 50px;
-    font-size: 0.75rem;
+    font-size: 0.65rem;
+    padding: 5px;
 }
+
 .copyright {
     font-size: 0.85rem;
     opacity: 0.35;
@@ -126,10 +161,29 @@ button::selection {
     bottom: 5px;
     margin-bottom: -5px;
 }
+
 .copyright span {
     font-weight: bold;
     font-style: italic;
     letter-spacing: 1px;
+}
+
+.redirect {
+    position: absolute;
+    /* bottom: 0; */
+    top: 60%;
+    left: 0;
+    background-color: transparent;
+    width: 60px;
+    height: max-content;
+    border-radius: 8px;
+}
+
+.redirect a {
+    font-size: 0.65rem;
+    text-align: center;
+    direction: rtl;
+    color: rgba(0, 0, 0, 0.65);
 }
 
 /*
