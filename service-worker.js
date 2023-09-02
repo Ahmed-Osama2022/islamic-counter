@@ -7,7 +7,7 @@ workbox.routing.registerRoute(
 );
 
 // const staticCacheName = 'site-static';
-const staticCacheName = 'site-static-ahmed-v1';
+const staticCacheName = 'site-static-ahmed-v2';
 const assets = [
     '/',
     '/index.html',
