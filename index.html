@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- ================== PWA ========================= -->
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-     <link rel="manifest" href="manifest.json">
-     <!-- ===================================================== -->
- 
+    <!-- ================== PWA ========================= -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="manifest.json">
+    <!-- ===================================================== -->
+
 
     <!-- meta tags for the developer ... -->
 
@@ -18,21 +19,23 @@
         الإستغفار
     </title>
 </head>
+
 <body>
     <div class="container">
         <div class="text">
-           <!-- <p>:فضل الصلاة على النبي محمد صلى الله عليه وسلم</p> -->
+            <!-- <p>:فضل الصلاة على النبي محمد صلى الله عليه وسلم</p> -->
             <p>
-                (فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا* يُرْسِلِ السَّمَاءَ عَلَيْكُمْ مِدْرَارًا* وَيُمْدِدْكُمْ بِأَمْوَالٍ وَبَنِينَ وَيَجْعَلْ لَكُمْ جَنَّاتٍ وَيَجْعَلْ لَكُمْ أَنْهَارًا).
+                (فَقُلْتُ اسْتَغْفِرُوا رَبَّكُمْ إِنَّهُ كَانَ غَفَّارًا* يُرْسِلِ السَّمَاءَ عَلَيْكُمْ مِدْرَارًا*
+                وَيُمْدِدْكُمْ بِأَمْوَالٍ وَبَنِينَ وَيَجْعَلْ لَكُمْ جَنَّاتٍ وَيَجْعَلْ لَكُمْ أَنْهَارًا).
             </p>
             <p>
                 [نوح: 10-12]
             </p>
         </div>
-        
+
         <div class="counter">0</div>
         <div class="word">
-            أستغفر الله 
+            أستغفر الله
         </div>
         <div class="btn-box">
             <button type="button" id="reset">العودة من جديد</button>
@@ -44,20 +47,27 @@
 
         <button class="redirect">
             <a href="./prophet-muhammad/index.html">
-              الصلاة على النبي محمد <<
-            </a>
-          </button>
+                الصلاة على النبي محمد << </a>
+        </button>
     </div>
 
 
     <script src="./main.js"></script>
 
-  <!-- ================== PWA ========================= -->
-  <script>
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('./service-worker.js');
-    }
+    <!-- ================== PWA ========================= -->
+    <script>
+        let deferredPrompt;
+        window.addEventListener('beforeinstallprompt', (e) => {
+            deferredPrompt = e;
+        });
     </script>
-<!-- ===================================================== -->    
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./service-worker.js');
+        }
+    </script>
+    <!-- ===================================================== -->
 </body>
+
 </html>
